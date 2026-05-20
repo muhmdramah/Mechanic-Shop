@@ -36,25 +36,56 @@ This solution provides a scalable and maintainable architecture for managing cus
 # 📁 Solution Structure
 
 ```bash
-src/
+Mechanic-Shop/
 │
-├── Core/
-│   ├── Domain/
-│   ├── Application/
+├── src/
 │
-├── Infrastructure/
-│   ├── Persistence/
-│   ├── Identity/
-│   ├── Services/
+│   ├── Core/
+│   │   ├── MechanicShop.Domain/
+│   │   │   ├── Entities/
+│   │   │   ├── ValueObjects/
+│   │   │   ├── Enums/
+│   │   │   ├── Events/
+│   │   │   └── Interfaces/
+│   │   │
+│   │   └── MechanicShop.Application/
+│   │       ├── Features/              # CQRS (Commands & Queries)
+│   │       ├── DTOs/
+│   │       ├── Interfaces/
+│   │       ├── Validators/
+│   │       └── Common/
 │
-├── Presentation/
-│   ├── API/
-│   ├── BlazorWasm/
+│   ├── Infrastructure/
+│   │   ├── MechanicShop.Infrastructure/
+│   │   │   ├── Persistence/          # DbContext, Configurations, Migrations
+│   │   │   ├── Identity/             # Authentication & Authorization
+│   │   │   ├── Services/             # External services (Email, Files, etc.)
+│   │   │   └── Repositories/
 │
-tests/
+│   ├── Presentation/
+│   │   ├── MechanicShop.API/
+│   │   │   ├── Controllers/
+│   │   │   ├── Middleware/
+│   │   │   ├── Extensions/
+│   │   │   └── Program.cs
+│   │   │
+│   │   └── MechanicShop.BlazorWasm/
+│   │       ├── Pages/
+│   │       ├── Components/
+│   │       ├── Services/
+│   │       ├── Shared/
+│   │       └── wwwroot/
+│
+├── tests/
 │   ├── UnitTests/
 │   ├── IntegrationTests/
-```
+│
+├── docker/
+├── docs/
+├── .github/
+├── appsettings.json
+├── docker-compose.yml
+└── README.md
 
 ---
 
