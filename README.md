@@ -86,8 +86,7 @@ Mechanic-Shop/
 ├── appsettings.json
 ├── docker-compose.yml
 └── README.md
-
----
+```
 
 # 🧱 Clean Architecture Layers
 
